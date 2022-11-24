@@ -1,3 +1,4 @@
+/* ------------- root ------------- */
 *,
 *::before,
 *::after{
@@ -15,9 +16,10 @@
     --comand-fon--: #F5F5F5;
     --btn-portfolio--:#F5F4FA;
     --sub-btn--:#188CE8;
+    --icons-color--: #AFB1B8;
 }
 
-/* reset */
+/* ------------- reset ------------- */
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -47,6 +49,10 @@ img{
     height: auto;
 }
 
+/* ------------- header ------------- */
+
+/* ------------- header navigator ------------- */
+
 .header-nav{
     border-bottom: 1px solid var(--border-header--);
 }
@@ -64,8 +70,6 @@ img{
     padding: 94px 0;
 }
 
-/* main-nav */
-
 .main-nav{
     display: flex;
     align-items: center;
@@ -75,6 +79,8 @@ img{
     display: flex;
     align-items: center;
 }
+
+/* ------------- logo navigator ------------- */
 
 .logo{
     font-family: 'Raleway', sans-serif;
@@ -97,7 +103,7 @@ img{
     color: var(--btn-logo--);
 }
 
-/* navigator */
+/* ------------- link navigator ------------- */
 
 .nav-link{
     display: flex;
@@ -151,10 +157,18 @@ img{
     padding-bottom: 32px;
 }
 
-/* main */
+/* ------------- main ------------- */
+/* ------------- hero ------------- */
 
 .hero{
-    background-color:var(--hero-fon--);
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../img/Img-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-color: var(--hero-fon--);
+
     text-align: center;
     padding: 200px 0;;
 }
@@ -172,22 +186,33 @@ img{
     text-transform: uppercase;
 }
 
-/* section and portfolio  */
+/* ------------- hero-button ------------- */
 
-.visually-hidden{
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+.sub-button {
+    padding: 10px 32px;
+    margin: 0 auto;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.86;
+    /* align-items: center; */
+    /* text-align: center; */
+    letter-spacing: 0.06em;
+    color: var(--color-type-main--);
+    background: var(--accent-color--);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-/* personal-link */
+.sub-button:hover,
+.sub-button:focus {
+    background: var(--sub-btn--);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+/* ------------- personal-link ------------- */
 
 .personal{
     padding-bottom: 0;
@@ -206,40 +231,6 @@ img{
     line-height: 1.14;
     letter-spacing: 0.03em;
     color: var(--second-color--);
-}
-
-.commandos-link .title{
-    color: var(---prime-color--);
-}
-
-.comandos-box{
-    background: var(--color-type-main--);
-}
-
-/* button */
-
-.sub-button{
-    padding: 10px 32px;
-    margin: 0 auto;
-    border:none;
-    font-family: inherit;
-    font-size: 16px;
-    line-height: 1.86;
-    /* align-items: center; */
-    /* text-align: center; */
-    letter-spacing: 0.06em;
-    color: var(--color-type-main--);  
-    background: var(--accent-color--);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.sub-button:hover,
-.sub-button:focus{
-    background: var(--sub-btn--);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
 }
 
 .personal-text{
@@ -265,14 +256,7 @@ img{
     color: var(--second-color--);
 }
 
-.section-job{
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-align: center;
-}
-
-/*  examples comandos */
+/* ------------- examples comandos ------------- */
 
 .work-list{
     display: flex;
@@ -291,6 +275,8 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+/* ------------- commands ------------- */
 
 .comand{
     background: var(--btn-portfolio--);;
@@ -320,8 +306,6 @@ img{
     margin-bottom: 50px;
 }
 
-/* commans */
-
 .foto-commands{
     display: block;
     max-width: 100%;
@@ -339,6 +323,7 @@ img{
 
 .command-position{
     margin: 0 auto;
+    margin-bottom: 16px;
 
     font-size: 16px;
     line-height: 1.19;
@@ -351,12 +336,51 @@ img{
 
 .comandos-box{
     padding: 30px 0;
+
+    background: var(--color-type-main--);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px
     rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
-/* index footer */
+/* ------------- personal social contacts ------------- */
+
+.web-soc-list {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.web-soc-items {
+    width: 44px;
+    height: 44px;
+}
+
+.web-soc-items:not(:last-child) {
+    margin-right: 10px;
+}
+
+.web-soc-link {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+    /* color: var(--icons-color--); */
+}
+
+/* .web-soc-link .web-soc-icons:hover{
+    color: var(--color-type-main--);
+} */
+.web-soc-link:hover .web-soc-icons {
+    fill: var(--color-type-main--);
+}
+
+
+/* ------------- index footer ------------- */
 
 .address{
     font-style: normal;
@@ -403,21 +427,27 @@ img{
     color: var(--accent-color--);
 }
 
-/* main portfolio */
+/* ------------- main portfolio ------------- */
+/* ------------- page portfolio ------------- */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
 
+/* ------------- button filter ------------- */
 .filtr{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-}
-
-.filter-items {
-    background-color: var(--btn-portfolio--);
-    color: var(---prime-color--);
-   
-    border-radius: 4px;
-    /* font-size: 25px; */
 }
 
 .filter-items:hover,
@@ -439,6 +469,7 @@ img{
 .filter-items{
     padding: 6px 22px;
     background-color: var(--btn-portfolio--);
+    color: var(---prime-color--);
 
     font-family: inherit;
     font-weight: 500;
@@ -452,7 +483,7 @@ img{
     border: none;
 }
 
- .btn-price{
+.btn-price{
     padding: 6px 22px;
     background-color: var(--accent-color--);
     color: var(--color-type-main--);
@@ -465,6 +496,7 @@ img{
     border:none;
 }
 
+/* ------------- menu proposition -------------  */
 .price-foto{
     display: block;
     max-width: 100%;
@@ -487,7 +519,6 @@ img{
     line-height: 1.9;
     letter-spacing: 0.03em;
 }
-
 
 .price-work{
     display: flex;
