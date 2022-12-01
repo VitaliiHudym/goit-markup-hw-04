@@ -146,21 +146,52 @@ img{
     color: var(--accent-color--);
 }
 
-.header-contacts{
+.header-contacts {
     display: flex;
     margin-left: auto;
     gap: 50px;
 }
 
-.header-contacts .link{
+.header-contacts .link {
     padding-top: 32px;
     padding-bottom: 32px;
 }
 
+.header-mail::before {
+    display: inline-block;
+    content: "";
+    width: 12px;
+    height: 16px;
+    margin-right: 10px;
+    fill: var(--second-color--);
+    background-image: url(../img/envelope\ \(hover\)\ \(1\).svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-tel::before {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: var(--second-color--);
+    background-image: url(../img/Vector\ \(1\).svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
 /* ------------- main ------------- */
 /* ------------- hero ------------- */
 
-.hero{
+.hero {
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
 
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../img/Img-hero.jpg');
     background-repeat: no-repeat;
@@ -254,6 +285,25 @@ img{
     letter-spacing: 0.03em;
 
     color: var(--second-color--);
+}
+
+/* ------------- personal icons ------------- */
+
+.personal-container {
+    display: inline-block;
+    width: 270px;
+    height: 120px;
+    background: var(--btn-portfolio--);
+    border-radius: 4px;
+}
+
+.personal-link {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ------------- examples comandos ------------- */
@@ -368,39 +418,107 @@ img{
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    background-color: tomato;
-    /* color: var(--icons-color--); */
+
+    color: var(--color-type-main--);
 }
 
-/* .web-soc-link .web-soc-icons:hover{
-    color: var(--color-type-main--);
-} */
-.web-soc-link:hover .web-soc-icons {
+.web-soc-icons {
+    fill: var(--icons-color--);
+}
+
+.web-soc-link:hover {
+    background-color: var(--accent-color--);
     fill: var(--color-type-main--);
 }
 
+.web-soc-icons:hover {
+    fill: var(--color-type-main--);
+}
+
+/* ------------- client base ------------- */
+
+.client-title{
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--prime-color--);
+}
+
+.client-list{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.client-items{
+    box-sizing: border-box;
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid var(--icons-color--);
+    border-radius: 4px;
+}
+
+.client-items:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client-link {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-type-main--);
+}
+
+.web-client-icons {
+    fill: var(--icons-color--);
+}
+
+.web-client-icons:hover {
+    fill: var(--accent-color--);
+}
+
+.client-items:hover {
+    border: 1px solid var(--accent-color--);
+}
 
 /* ------------- index footer ------------- */
 
-.address{
+.footer-adress {
+    display: flex;
+}
+
+.address {
     font-style: normal;
 }
 
-.footer{
+.footer {
     background: var(--hero-fon--);
     padding: 60px 0;
 }
 
-.logo-block{
+.logo-block {
     display: block;
     margin-bottom: 20px;
 }
 
-.footer-logo{
+.footer-logo {
     color: var(--color-type-main--);
 }
 
-.footer-adress{
+.footer-adress {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
@@ -408,14 +526,14 @@ img{
 }
 
 .footer-mail,
-.footer-tel{
+.footer-tel {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-link{
+.footer-link {
     display: flex;
     flex-direction: column;
     gap: 9px;
@@ -423,8 +541,66 @@ img{
 }
 
 .footer-link .link:hover,
-.footer-link .link:focus{
+.footer-link .link:focus {
     color: var(--accent-color--);
+}
+
+.footer-title {
+    padding: 0;
+    padding-top: 15px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-type-main--);
+}
+
+.footer-soc-list {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.footer-soc-items {
+    width: 44px;
+    height: 44px;
+}
+
+.footer-soc-items:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-soc-link {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+
+    color: var(--color-type-main--);
+}
+
+.footer-soc-icons {
+    fill: var(--color-type-main--);
+}
+
+.footer-soc-link:hover {
+    background-color: var(--accent-color--);
+    fill: var(--color-type-main--);
+}
+
+.footer-soc-icons:hover {
+    fill: var(--color-type-main--);
+}
+
+.cont-soc-adress {
+    margin-left: 70px;
 }
 
 /* ------------- main portfolio ------------- */
@@ -443,7 +619,7 @@ img{
 }
 
 /* ------------- button filter ------------- */
-.filtr{
+.filtr {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -457,16 +633,16 @@ img{
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filter-btn{
+.filter-btn {
     display: inline;
     margin-right: 8px;
 }
 
-.filter-btn:last-child{
+.filter-btn:last-child {
     margin-right: 0;
 }
 
-.filter-items{
+.filter-items {
     padding: 6px 22px;
     background-color: var(--btn-portfolio--);
     color: var(---prime-color--);
@@ -483,7 +659,7 @@ img{
     border: none;
 }
 
-.btn-price{
+.btn-price {
     padding: 6px 22px;
     background-color: var(--accent-color--);
     color: var(--color-type-main--);
@@ -497,12 +673,12 @@ img{
 }
 
 /* ------------- menu proposition -------------  */
-.price-foto{
+.price-foto {
     display: block;
     max-width: 100%;
 }
 
-.prject-title{
+.prject-title {
     color: var(--prime-color--);
 
     font-size: 18px;
@@ -510,7 +686,7 @@ img{
     letter-spacing: 0.06em;
 }
 
-.project-text{
+.project-text {
     margin: 0;
     padding: 0;
     color: var(--second-color--);
@@ -520,13 +696,13 @@ img{
     letter-spacing: 0.03em;
 }
 
-.price-work{
+.price-work {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.project-title{
+.project-title {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -536,13 +712,21 @@ img{
     margin-bottom: 4px;
 }
 
-.div-price{
+.div-price {
     padding: 20px 24px;
 }
 
-.box-items{
+.box-items {
     width: calc((100% -  66px) / 3);
     border: 1px solid var(--price-border--);
+}
+
+.box-items:hover,
+.box-items:focus {
+    box-shadow: 0px 1px 1px 
+    rgba(0, 0, 0, 0.12), 0px 4px 4px 
+    rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16)
 }
 
 .box-items:nth-child(3n+3){
