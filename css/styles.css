@@ -99,7 +99,8 @@ img{
     color: var(--accent-color--);
 }
 
-.logo:hover {
+.logo:hover,
+.logo:focus {
     color: var(--btn-logo--);
 }
 
@@ -144,6 +145,7 @@ img{
 .header-contacts .link:hover,
 .header-contacts .link:focus{
     color: var(--accent-color--);
+    fill: var(--accent-color--);
 }
 
 .header-contacts {
@@ -160,8 +162,8 @@ img{
 .header-mail::before {
     display: inline-block;
     content: "";
-    width: 12px;
-    height: 16px;
+    width: 16px;
+    height: 14px;
     margin-right: 10px;
     fill: var(--second-color--);
     background-image: url(../img/envelope\ \(hover\)\ \(1\).svg);
@@ -176,8 +178,8 @@ img{
     width: 10px;
     height: 16px;
     margin-right: 10px;
-    fill: var(--second-color--);
     background-image: url(../img/Vector\ \(1\).svg);
+    fill: var(--second-color--);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -189,7 +191,7 @@ img{
 
 .hero {
     max-width: 1600px;
-    min-height: 600px;
+    /* min-height: 600px; */
     margin-left: auto;
     margin-right: auto;
 
@@ -226,8 +228,7 @@ img{
     font-family: inherit;
     font-size: 16px;
     line-height: 1.86;
-    /* align-items: center; */
-    /* text-align: center; */
+
     letter-spacing: 0.06em;
     color: var(--color-type-main--);
     background: var(--accent-color--);
@@ -245,26 +246,19 @@ img{
 
 /* ------------- personal-link ------------- */
 
-.personal{
+.personal {
     padding-bottom: 0;
 }
 
-.personal-item{
+.personal-item {
     width: 270px;
 }
 
-.personal-item:last-child{
+.personal-item:last-child {
     margin-right: 0;
 }
 
-.personal-link  {
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    color: var(--second-color--);
-}
-
-.personal-text{
+.personal-text {
     margin-top: 0;
     margin-bottom: 10;
     font-size: 14px;
@@ -274,7 +268,7 @@ img{
     color: var(--prime-color--);
 }
 
-.personal-list{
+.personal-list {
     display: flex;
     gap: 30px;
 
@@ -290,21 +284,16 @@ img{
 /* ------------- personal icons ------------- */
 
 .personal-container {
-    display: inline-block;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
     width: 270px;
     height: 120px;
     background: var(--btn-portfolio--);
     border-radius: 4px;
 }
 
-.personal-link {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /* ------------- examples comandos ------------- */
 
@@ -420,18 +409,17 @@ img{
     align-items: center;
 
     color: var(--color-type-main--);
-}
-
-.web-soc-icons {
     fill: var(--icons-color--);
 }
 
-.web-soc-link:hover {
+.web-soc-link:hover,
+.web-soc-link:focus {
     background-color: var(--accent-color--);
     fill: var(--color-type-main--);
 }
 
-.web-soc-icons:hover {
+.web-soc-icons:hover,
+.web-soc-icons:focus {
     fill: var(--color-type-main--);
 }
 
@@ -480,17 +468,17 @@ img{
     align-items: center;
 
     color: var(--color-type-main--);
-}
-
-.web-client-icons {
     fill: var(--icons-color--);
 }
 
-.web-client-icons:hover {
+
+.client-link:hover,
+.client-link:focus {
     fill: var(--accent-color--);
 }
 
-.client-items:hover {
+.client-items:hover,
+.client-items:focus {
     border: 1px solid var(--accent-color--);
 }
 
@@ -498,6 +486,7 @@ img{
 
 .footer-adress {
     display: flex;
+    align-items: baseline;
 }
 
 .address {
@@ -518,7 +507,12 @@ img{
     color: var(--color-type-main--);
 }
 
-.footer-adress {
+.cont-adress {
+    min-width: 231px;
+
+}
+
+.footer-street{
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
@@ -547,7 +541,6 @@ img{
 
 .footer-title {
     padding: 0;
-    padding-top: 15px;
     margin: 0;
     margin-bottom: 20px;
     font-style: normal;
@@ -584,18 +577,17 @@ img{
     background: rgba(255, 255, 255, 0.1);
 
     color: var(--color-type-main--);
-}
-
-.footer-soc-icons {
     fill: var(--color-type-main--);
 }
 
-.footer-soc-link:hover {
+.footer-soc-link:hover,
+.footer-soc-link:focus {
     background-color: var(--accent-color--);
     fill: var(--color-type-main--);
 }
 
-.footer-soc-icons:hover {
+.footer-soc-icons:hover,
+.footer-soc-icons:focus {
     fill: var(--color-type-main--);
 }
 
@@ -721,8 +713,12 @@ img{
     border: 1px solid var(--price-border--);
 }
 
-.box-items:hover,
-.box-items:focus {
+.box-link{
+    display: block;
+}
+
+.box-link:hover,
+.box-link:focus {
     box-shadow: 0px 1px 1px 
     rgba(0, 0, 0, 0.12), 0px 4px 4px 
     rgba(0, 0, 0, 0.06), 
