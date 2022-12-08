@@ -58,7 +58,7 @@ img{
 }
 
 .container{
-    /* align-items: center; */
+    box-sizing: border-box;
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
@@ -135,6 +135,9 @@ img{
 }
 
 .header-contacts .link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     color:var(--second-color--);
     font-weight: 500;
     font-size: 14px;
@@ -145,7 +148,6 @@ img{
 .header-contacts .link:hover,
 .header-contacts .link:focus{
     color: var(--accent-color--);
-    fill: var(--accent-color--);
 }
 
 .header-contacts {
@@ -154,37 +156,15 @@ img{
     gap: 50px;
 }
 
-.header-contacts .link {
-    padding-top: 32px;
-    padding-bottom: 32px;
+.header-mail {
+    display: flex;
+    align-items: center;
 }
 
-.header-mail::before {
-    display: inline-block;
-    content: "";
-    width: 16px;
-    height: 14px;
-    margin-right: 10px;
-    fill: var(--second-color--);
-    background-image: url(../img/envelope\ \(hover\)\ \(1\).svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.header-tel {
+    display: flex;
+    align-items: center;
 }
-
-.header-tel::before {
-    display: inline-block;
-    content: "";
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    background-image: url(../img/Vector\ \(1\).svg);
-    fill: var(--second-color--);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 
 /* ------------- main ------------- */
 /* ------------- hero ------------- */
@@ -279,6 +259,11 @@ img{
     letter-spacing: 0.03em;
 
     color: var(--second-color--);
+}
+
+.personal-icons {
+    width: 70px;
+    height: 70px;
 }
 
 /* ------------- personal icons ------------- */
@@ -446,13 +431,8 @@ img{
 }
 
 .client-items{
-    box-sizing: border-box;
-
     width: 170px;
     height: 92px;
-
-    border: 1px solid var(--icons-color--);
-    border-radius: 4px;
 }
 
 .client-items:not(:last-child) {
@@ -469,6 +449,9 @@ img{
 
     color: var(--color-type-main--);
     fill: var(--icons-color--);
+
+    border: 1px solid var(--icons-color--);
+    border-radius: 4px;
 }
 
 
