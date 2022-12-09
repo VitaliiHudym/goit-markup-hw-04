@@ -135,7 +135,8 @@ img{
 }
 
 .header-contacts .link{
-    display: block;
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     color:var(--second-color--);
@@ -458,12 +459,10 @@ img{
 .client-link:hover,
 .client-link:focus {
     fill: var(--accent-color--);
-}
-
-.client-items:hover,
-.client-items:focus {
     border: 1px solid var(--accent-color--);
 }
+
+
 
 /* ------------- index footer ------------- */
 
@@ -484,6 +483,12 @@ img{
 .logo-block {
     display: block;
     margin-bottom: 20px;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color--);
 }
 
 .footer-logo {
@@ -517,8 +522,13 @@ img{
 
 }
 
-.footer-link .link:hover,
-.footer-link .link:focus {
+.footer-link .footer-mail:hover,
+.footer-link .footer-mail:focus {
+    color: var(--accent-color--);
+}
+
+.footer-link .footer-tel:hover,
+.footer-link .footer-tel:focus {
     color: var(--accent-color--);
 }
 
